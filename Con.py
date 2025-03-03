@@ -7,8 +7,8 @@ def parseInput(line):
     return Row(user_id=int(fields[0]),
                age=int(fields[1]),
                gender=fields[2],
-               occupation=fields[3]),
-               zip=fields[4])
+               occupation=fields[3],
+               zip=int(fields[4]))
 
 # Let's modify this to use Spark's connector instead of the Python driver
 def create_keyspace_and_table(spark, keyspace):
